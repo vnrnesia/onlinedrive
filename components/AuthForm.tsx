@@ -1,9 +1,13 @@
-import React from 'react'
+import React from 'react';
 
-const AuthForm = () => {
+type AuthFormProps = {
+  type: 'sign-in' | 'sign-up'; 
+};
+
+const AuthForm: React.FC<AuthFormProps> = ({ type }) => {
   return (
-    <div>AuthForm</div>
-  )
-}
+    <div>AuthForm - {type}</div>
+  );
+};
 
-export default AuthForm
+export default AuthForm;
